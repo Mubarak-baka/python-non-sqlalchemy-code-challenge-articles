@@ -17,9 +17,9 @@ class Author:
 
     def magazines(self):
         # Return unique magazines the author has written for
-        return list(set(article.magazine for article in self._articles))
+        return list(set(article.magazine for article in self._articles))  
 
-    def add_article(self, magazine, title):
+    def add_article(self, magazine, title): 
         # Create and return a new article
         return Article(self, magazine, title)
 
@@ -133,3 +133,35 @@ class Article:
     def all(cls):
         # Return all articles
         return cls.all_articles
+    
+
+
+author1 = Author("Maina")  
+
+
+
+magazine1 = Magazine("Business Today", "Business") 
+
+
+
+article1 = magazine1.add_article(author1, "The Future of Sports") 
+
+
+
+print(f"Author: {author1.name}")
+
+print(f"Magazine: {magazine1.name}")
+
+print(f"Article Title: {article1.title}")  
+
+
+print("Articles by Author:", [article.title for article in author1.articles()]) 
+
+
+
+print("Magazines by Author:", [magazine.name for magazine in author1.magazines()])  
+
+
+
+
+    

@@ -153,6 +153,7 @@ stretch your skills.
 
 #### Bonus: Aggregate and Association Method
 
+
 - `Magazine classmethod top_publisher()`
   - Returns the `Magazine` instance with the most articles
   - Returns `None` if there are no articles.
